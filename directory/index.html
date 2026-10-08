@@ -3,47 +3,135 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Directory | Community | Unique Perspective 8</title>
+  <title>Master directory | Community | Unique Perspective 8</title>
+  <meta name="description" content="Master directory for the Unique Perspective 8 community door. Field list, clubs, education shelf, and artisan shelves. Not a till." />
   <style>
-    body { font-family: Georgia, serif; color: #2a241c; background: #f4efe6; margin: 0; line-height: 1.45; }
-    main { width: min(760px, calc(100% - 32px)); margin: 28px auto 40px; }
-    a { color: #8a4b32; }
-    article { background: #fbf8f3; border: 1px solid #ddd4c6; padding: 14px 16px; margin: 12px 0; }
-    h1 { font-weight: 500; }
-    h2 { font-size: 20px; font-weight: 500; margin: 0 0 6px; }
-    .state { font-family: "Avenir Next", Gill Sans, sans-serif; color: #8a4b32; margin: 0 0 8px; }
+    :root { --ink:#2a241c; --muted:#6d6256; --paper:#f4efe6; --card:#fbf8f3; --line:#ddd4c6; --accent:#8a4b32; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Palatino, Georgia, serif; color: var(--ink); background: var(--paper); line-height: 1.45; }
+    header, main, footer { width: min(880px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 28px 0 8px; }
+    .eyebrow, .label { font-family: "Avenir Next", Gill Sans, sans-serif; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; color: var(--accent); margin: 0 0 8px; }
+    .label { color: var(--muted); }
+    h1 { font-weight: 500; font-size: 34px; margin: 0 0 8px; }
+    h2 { font-size: 22px; font-weight: 500; margin: 28px 0 8px; }
+    .lede { color: var(--muted); max-width: 42em; }
+    a { color: var(--accent); }
+    .doors { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+    .door, .mail { font-family: "Avenir Next", Gill Sans, sans-serif; text-decoration: none; border: 1px solid var(--accent); background: var(--card); color: var(--ink); padding: 10px 14px; font-size: 14px; }
+    .mail { background: var(--ink); color: var(--paper); }
+    article { background: var(--card); border: 1px solid var(--line); padding: 14px 16px; margin: 12px 0; }
+    article h3 { font-size: 20px; font-weight: 500; margin: 0 0 6px; }
+    .state { font-family: "Avenir Next", Gill Sans, sans-serif; color: var(--accent); margin: 0 0 8px; }
+    footer { margin: 8px auto 32px; color: var(--muted); font-size: 14px; }
   </style>
 </head>
 <body>
+  <header>
+    <p class="eyebrow">community.uniqueperspective8.com · not a till</p>
+    <h1>Master directory</h1>
+    <p class="lede">The field list, the clubs, and the education shelf. A name on this page is an email, not an account. Prices stay on the shop and services hosts. This page does not take payment.</p>
+    <nav class="doors" aria-label="Directory sections">
+      <a class="door" href="#field-list">Field list</a>
+      <a class="door" href="#clubs">Clubs</a>
+      <a class="door" href="#education">Education</a>
+      <a class="door" href="#artisans">Artisan shelves</a>
+      <a class="door" href="#workshops">Workshops</a>
+      <a class="mail" href="/join.html">Join by email</a>
+    </nav>
+  </header>
   <main>
-    <p>Community · not a till</p>
-    <h1>Directory</h1>
+    <h2 id="field-list">Field list</h2>
+    <article>
+      <h3>Join</h3>
+      <p class="state">Email · free · no account</p>
+      <p>Send a name and a town. That email is the consent to receive field notes, education sheets, and workshop dates when a date exists. A reply that says leave takes you off.</p>
+      <p><a class="mail" href="/join.html">Join the field list</a></p>
+    </article>
+    <article>
+      <h3>Field to shelf</h3>
+      <p class="state">The order a stone moves</p>
+      <p>Whose ground, photograph in place, second look, card, reading shelf, then what travels to the shop. A skipped step is not a specimen.</p>
+      <p><a href="/field-to-shelf.html">Open the path</a> · <a href="/rock-your-perspective/">rock-your-perspective</a> points here.</p>
+    </article>
+
+    <h2 id="clubs">Clubs</h2>
+    <article>
+      <h3>Rock Your Perspective</h3>
+      <p class="state">Facebook group · conversation, not a listing</p>
+      <p>The conversation lives in the group. This directory does not copy posts, and a member is not a name on a shelf.</p>
+      <p><a href="https://www.facebook.com/groups/2050778315791704/">Open the group</a></p>
+    </article>
+    <article>
+      <h3>Faulted not broken</h3>
+      <p class="state">Messenger community · conversation, not a listing</p>
+      <p>The conversation lives in Messenger. This directory does not copy posts.</p>
+      <p><a href="https://m.me/cm/AbbhKTADUfxKCAUZ/?send_source=cm:share_to_more">Open Faulted not broken</a></p>
+    </article>
+
+    <h2 id="education">Education shelf</h2>
+    <article>
+      <h3>Reading on this host</h3>
+      <p class="state">Free · no checkout</p>
+      <p>Rockhounding, bench lessons, and the sheets that travel with a stone. A video by another maker is labeled as theirs.</p>
+      <p><a href="/education/">Education shelf</a></p>
+      <p><a href="/education/rockhounding/">Rockhounding</a> · <a href="/education/jewelry-making/">Jewelry making</a></p>
+      <p><a href="/education/downloads/UP8-09-Specimen-Card.html" download>Specimen card</a> · <a href="/education/downloads/UP8-10-Field-Day-Checklist.html" download>Field day checklist</a> · <a href="/education/downloads/UP8-11-Gold-Pyrite-Card.html" download>Gold and pyrite card</a></p>
+    </article>
+    <article>
+      <h3>House education</h3>
+      <p class="state">Canonical guides stay on the house</p>
+      <p>The field guides and the stewardship standard live on the house. This shelf does not invent a second set.</p>
+      <p><a href="https://uniqueperspective8.com/education/">Education hub</a></p>
+    </article>
+
+    <h2 id="artisans">Artisan shelves</h2>
     <p>Three shelves. A name goes on a shelf only after that person agrees in writing. A club email in a spreadsheet is not an agreement.</p>
     <article>
-      <h2>Local artisans and makers</h2>
+      <h3>Local artisans and makers</h3>
       <p class="state">None listed</p>
       <p>South Okanagan craftspeople, lapidary artists, and jewelers who finish work by hand. No names yet.</p>
     </article>
     <article>
-      <h2>Wellness and resilience providers</h2>
+      <h3>Wellness and resilience providers</h3>
       <p class="state">None listed</p>
       <p>Local practices a person can name for themselves. This shelf does not claim they follow the 38-week roadmap.</p>
     </article>
     <article>
-      <h2>Ethical suppliers and partners</h2>
+      <h3>Ethical suppliers and partners</h3>
       <p class="state">None listed</p>
       <p>Creators, material suppliers, and nonprofits. A reply is not a partnership.</p>
     </article>
     <article>
-      <h2>What a profile has to hold</h2>
+      <h3>What a profile has to hold</h3>
       <p>A real name, a town, and a concrete craft. A sentence on how the work meets ethical sourcing or stewardship, written from a fact. The Unique Perspective 8 connection only if it happened: a shared table, a material, a date. A link to their own page. If any of those is missing, the profile waits.</p>
       <p><a href="/artisans.html">Ask to be listed</a></p>
     </article>
     <article>
-      <h2>Vetting</h2>
+      <h3>Vetting</h3>
       <p>A listing needs written permission and a regional craft or practice. Growth is the count of people who agreed, not a grant metric. No associate has been hired to fill this page.</p>
     </article>
-    <p><a href="/">Back to the community list</a></p>
+
+    <h2 id="workshops">Workshops</h2>
+    <article>
+      <h3>Next date</h3>
+      <p class="state">None published</p>
+      <p>Interest is not a seat. There is no fee on this page. The reading stays on the education shelf until a date exists.</p>
+      <p><a href="/workshops.html">Open workshops</a></p>
+    </article>
+
+    <h2 id="leave">Leave this host</h2>
+    <article>
+      <h3>Prices stay elsewhere</h3>
+      <p class="state">This directory does not take payment</p>
+      <p>The house keeps the story. The shop keeps the catalog. Services keeps care and the Audit.</p>
+      <p><a href="https://uniqueperspective8.com/">House</a> · <a href="https://shop.uniqueperspective8.com/">Shop</a> · <a href="https://services.uniqueperspective8.com/Services">Services</a></p>
+      <p><a href="mailto:community@uniqueperspective8.com?cc=services@uniqueperspective8.com&subject=UP8%20community%20list">community@uniqueperspective8.com</a></p>
+    </article>
   </main>
+  <footer>
+    <p><a href="/">Back to the community list</a></p>
+    <p>Unique Perspective 8 · master directory. Join by email. Not a shop.</p>
+  </footer>
 </body>
 </html>
