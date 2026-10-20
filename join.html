@@ -3,22 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Join the list | Community | Unique Perspective 8</title>
+  <title>Join the field list | Community | Unique Perspective 8</title>
   <style>
-    body { font-family: Georgia, serif; color: #2a241c; background: #f4efe6; margin: 0; line-height: 1.45; }
-    main { width: min(720px, calc(100% - 32px)); margin: 28px auto 40px; }
-    a.mail { display: inline-block; margin-top: 12px; font-family: "Avenir Next", Gill Sans, sans-serif; text-decoration: none; background: #2a241c; color: #f4efe6; padding: 10px 14px; }
-    a { color: #8a4b32; }
+    :root { --ink:#2a241c; --muted:#6d6256; --paper:#f4efe6; --card:#fbf8f3; --line:#ddd4c6; --accent:#8a4b32; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Palatino, Georgia, serif; color: var(--ink); background: var(--paper); line-height: 1.5; }
+    main { width: min(720px, calc(100% - 32px)); margin: 32px auto 48px; }
+    .eyebrow { font-family: "Avenir Next", Gill Sans, sans-serif; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; color: var(--accent); margin: 0 0 6px; }
+    h1 { font-weight: 500; font-size: 32px; margin: 0 0 12px; }
+    h2 { font-weight: 500; font-size: 22px; margin: 36px 0 10px; }
+    p { margin: 0 0 14px; }
+    .lede { color: var(--muted); }
+    .value-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 18px; }
+    .value-links a, .mail { font-family: "Avenir Next", Gill Sans, sans-serif; text-decoration: none; border: 1px solid var(--accent); background: var(--card); color: var(--ink); padding: 10px 14px; font-size: 14px; display: inline-block; }
+    .mail { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    form { background: var(--card); border: 1px solid var(--line); padding: 18px; margin: 12px 0 20px; }
+    label { display: block; font-family: "Avenir Next", Gill Sans, sans-serif; font-size: 13px; margin: 12px 0 4px; }
+    input { width: 100%; padding: 8px 10px; border: 1px solid var(--line); background: var(--paper); font-family: inherit; font-size: 16px; }
+    button { margin-top: 16px; font-family: "Avenir Next", Gill Sans, sans-serif; background: var(--ink); color: var(--paper); border: 0; padding: 12px 18px; font-size: 14px; cursor: pointer; }
+    .confirm { background: var(--card); border-left: 3px solid var(--accent); padding: 14px 16px; margin-top: 8px; color: var(--muted); }
+    a { color: var(--accent); }
   </style>
 </head>
 <body>
   <main>
-    <p>Community · not a till</p>
-    <h1>Join the list.</h1>
-    <p>This is an email subscription. It is not an account, and it is not a payment.</p>
-    <p>Send your name and the town you are writing from. That email is the consent to receive field notes, education sheets, and workshop dates when they exist. A reply that says leave takes you off.</p>
-    <p><a class="mail" href="mailto:community@uniqueperspective8.com?subject=Join%20the%20list&body=Name%3A%0ATown%3A%0A%0AI%20want%20field%20notes%20and%20education%20sheets.%20I%20can%20leave%20by%20replying%20leave.">Join by email</a></p>
-    <p><a href="/">Back to the community list</a></p>
+    <p class="eyebrow">Community · not a till</p>
+    <h1>Join the field list.</h1>
+    <p class="lede">One short email when there is something real to share: a dated field day, an education sheet, or news from the community table in the South Okanagan. No payments here, and nothing to buy.</p>
+
+    <h2>What you can open now</h2>
+    <p>The starter guide and field-test sheets are free and already on this site. Read or download them before you decide whether the list is useful.</p>
+    <div class="value-links">
+      <a href="/education/starter-guide/">BC Rockhound’s Starter Guide</a>
+      <a href="/education/downloads/UP8-10-Field-Day-Checklist.html" download>Field day checklist</a>
+      <a href="/education/downloads/UP8-09-Specimen-Card.html" download>Specimen card</a>
+      <a href="/education/downloads/UP8-11-Gold-Pyrite-Card.html" download>Gold and pyrite card</a>
+    </div>
+
+    <h2>Join the list</h2>
+    <p>Send your name and the town you are writing from. That email is the consent to receive field notes and education sheets when they exist. A reply that says leave takes you off.</p>
+    <form id="join-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+      <label for="town">Town</label>
+      <input id="town" name="town" type="text" required>
+      <button type="submit">Open email to join</button>
+    </form>
+    <div class="confirm" id="confirm" hidden>
+      Your email client should open—send the message to join. A reply that says ‘leave’ removes you.
+    </div>
+
+    <p style="margin-top:32px;"><a href="/">Back to the community list</a></p>
   </main>
+  <script>
+    document.getElementById('join-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const town = encodeURIComponent(document.getElementById('town').value.trim());
+      const body = 'Name: ' + decodeURIComponent(name) + '%0ATown: ' + decodeURIComponent(town) + '%0A%0AI want field notes and education sheets. I can leave by replying leave.';
+      const mailto = 'mailto:community@uniqueperspective8.com?subject=Join%20the%20list&body=' + body;
+      window.location.href = mailto;
+      document.getElementById('confirm').hidden = false;
+    });
+  </script>
 </body>
 </html>
